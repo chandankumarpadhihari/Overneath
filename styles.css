@@ -1,0 +1,233 @@
+/* General Reset */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Full-Screen Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    max-width: 80%;
+    font-size: 13px;
+}
+
+.overlay button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.overlay button:hover {
+    background-color: gray;
+    color: white;
+}
+
+
+/* Banner */
+.banner {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.banner a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+    height: 100px; /* Default size */
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    margin-left: auto; /* Pushes it to the right */
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* Branding */
+.branding {
+    text-align: center;
+}
+
+.branding h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 8rem !important; /* Large text */
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    display: inline-block;
+    background: linear-gradient(to right, white, gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.branding p {
+    font-family: "Cutive Mono", monospace;
+    font-size: 16px;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem !important; /* Large text */
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    display: inline-block;
+    background: linear-gradient(to right, white, gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Product Section */
+.product {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.product-card p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#tshirtImage {
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+    opacity: 1;
+}
+.hidden {
+    opacity: 0;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 60px; /* Reduced for tablets */
+    }
+
+    .branding h1 {
+        font-size: 6rem !important;
+    }
+
+    .branding p {
+        font-size: 14px;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .branding h1 {
+        font-size: 4rem !important;
+        letter-spacing: 2px;
+    }
+
+    .branding p {
+        font-size: 12px;
+    }
+
+    .logo img {
+        height: 50px; /* Further reduced for mobile */
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .banner {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

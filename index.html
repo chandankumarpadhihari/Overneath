@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overneath Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+</head>
+
+<script>
+    const images = ["s1.png", "s2.png", "s3.png", "s4.png"]; // List of images
+    let index = 0;
+
+    function changeImage() {
+        const imgElement = document.getElementById("tshirtImage");
+        
+        // Fade out the image
+        imgElement.classList.add("hidden");
+
+        setTimeout(() => {
+            index = (index + 1) % images.length; // Get next image
+            imgElement.src = images[index]; // Change image
+            
+            // Fade in the new image
+            imgElement.classList.remove("hidden");
+        }, 500); // Delay to match fade-out effect
+    }
+
+    // Change the image every 2 seconds
+    setInterval(changeImage, 2000);
+
+    function hideIntro() {
+        document.getElementById("introOverlay").style.display = "none";
+    }
+    
+</script>
+
+
+
+<body>
+
+    <!-- Intro Overlay -->
+<div id="introOverlay" class="overlay">
+    <div class="overlay-content">
+        <h2>Welcome to Overneath</h2>
+        <p>🔥 ONE CHANCE. ONE DESIGN. FOREVER GONE. 🔥<br><br>
+
+            You have one shot—one opportunity. This exclusive design is live NOW… but not for long.<br><br>
+            
+            💀 No restocks. No second chances.<br>
+            ⏳ Time is ticking. The stock is vanishing.<br>
+            ⚠️ Miss it? Lose it. FOREVER.<br><br>
+            
+            This is not just a T-shirt—it’s a statement, a badge of exclusivity. If you hesitate, someone else will take your place.<br><br>
+            
+            🔔 Last warning: Once it’s gone, it’s GONE. Will you own it or just watch it disappear? Act now.</p>
+            
+        <button onclick="hideIntro()">Let's Go</button>
+    </div>
+</div>
+
+
+    <!-- Banner -->
+    <div class="banner">
+        <a href="#">Create account to get 10% Discount</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="nav">
+            
+        </nav>
+    </header>
+
+   
+
+    <!-- Main Content -->
+    <main>
+        <div class="logo">
+            <img src="on logo.png" alt="Overneath Logo">
+        </div>
+        <!-- Logo & Text -->
+        <div class="branding">
+            <h1>OVERNEATH</h1>
+            <p>Wear Your Personality</p>  
+        </div>
+        <!-- T-Shirt Section -->
+        <section class="product">
+            <h2>Limited Stock Hurry Up!!!</h2>
+            <div class="product-card">
+                <a id="imageLink" href="product1.html" target="_blank">
+                    <img id="tshirtImage" src="s1.png" alt="T-Shirt">
+                </a>                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Overneath. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
